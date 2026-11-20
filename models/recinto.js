@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const recintoSchema = new mongoose.Schema({
     nombre: {
@@ -17,10 +17,11 @@ const recintoSchema = new mongoose.Schema({
         minlength: 3
     },
     aforoMaximo: {
-        type: Number
+        type: Number,
+        required: false
     }
 });
 
-const Recinto = mongoose.model('recintos', recintoSchema);
+const Recinto = mongoose.model("recintos", recintoSchema);
 
 export default Recinto;
