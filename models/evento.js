@@ -16,10 +16,7 @@ const entradaSchema = new mongoose.Schema({
         type: Number,
         required: true,
         min: 0,
-        validate: {
-            validator: Number.isInteger,
-            message: "disponibles debe ser un número entero"
-        }
+        validate: Number.isInteger        
     }
 });
 
