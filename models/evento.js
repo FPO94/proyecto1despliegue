@@ -1,7 +1,6 @@
 import mongoose from "mongoose";
 
-/* Podría haber usado let en vez de const pero no quiero reasignar los esquemas de los modelos */
-const entradaSchema = new mongoose.Schema({
+let entradaSchema = new mongoose.Schema({
     tipo: {
         type: String,
         required: true,
@@ -20,7 +19,7 @@ const entradaSchema = new mongoose.Schema({
     }
 });
 
-const eventoSchema = new mongoose.Schema({
+let eventoSchema = new mongoose.Schema({
     nombre: {
         type: String,
         required: true,
@@ -40,6 +39,6 @@ const eventoSchema = new mongoose.Schema({
 
 
 
-const Evento = mongoose.model("eventos", eventoSchema);
+let Evento = mongoose.model("eventos", eventoSchema);
 
 export default Evento;

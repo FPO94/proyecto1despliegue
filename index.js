@@ -13,7 +13,7 @@ import eventos from "./routes/eventos.js";
 mongoose.connect(process.env.MONGODB_URI);
 
 // Habilitar el servidor Express 
-const app = express();
+let app = express();
 
 // Habilitar el middleware para procesar peticiones JSON
 app.use(express.json());

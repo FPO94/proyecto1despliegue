@@ -77,7 +77,7 @@ router.put("/:id", async (req, res) => {
                 entradas: req.body.entradas,
                 recinto: req.body.recinto
             }
-        }, { returnDocument: "after" });
+        }, { returnDocument: "after", runValidators: true });
         if (resultado)
             res.status(200).send({ ok: true, resultado: resultado });
         else

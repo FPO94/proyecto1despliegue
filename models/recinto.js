@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const recintoSchema = new mongoose.Schema({
+let recintoSchema = new mongoose.Schema({
     nombre: {
         type: String,
         required: true,
@@ -22,6 +22,6 @@ const recintoSchema = new mongoose.Schema({
     }
 });
 
-const Recinto = mongoose.model("recintos", recintoSchema);
+let Recinto = mongoose.model("recintos", recintoSchema);
 
 export default Recinto;
